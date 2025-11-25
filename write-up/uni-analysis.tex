@@ -1,0 +1,179 @@
+\documentclass[12pt]{article}
+% Packages
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{float}
+
+% Title Info
+\title{Analyzing the Relationship Between Dominant Major and 
+Median Earnings Within U.S. Universities}
+\author{Gregory Park}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\onehalfspacing
+
+\section{Introduction}
+
+The return on investment for higher education is an 
+important concern for students and policymakers. 
+This paper addresses the following research question: 
+\textit{Do universities with different dominant majors 
+produce different earnings outcomes for their graduates?} 
+Understanding this relationship can inform both 
+student college choices and institutional policy decisions.
+
+\section{Data and Methodology}
+
+\subsection{Data Source}
+
+I worked with data from the U.S. Department of Education's College Scorecard 
+(Most Recent Institution-Level Data, updated April 2023), 
+which provides institution-level information on student demographics, outcomes, and 
+admissions. The sample includes data on approximately 6,000 
+institutions in the United States.
+
+\subsection{Key Variables}
+My analysis focuses on two key variables:
+\begin{itemize}
+    \item \textbf{Dominant Major}: The academic major representing the largest 
+    percentage of degrees earned at each institution.
+    
+    \item \textbf{Median Earnings}: The median earnings of graduates 10 years 
+    after initial enrollment.
+\end{itemize}
+
+\subsection{Sample Selection}
+
+I restricted the sample to predominantly bachelor's-degree granting 
+universities with complete earnings data. I also  
+excluding specialized institutions where a single major 
+represented more than 60\% of degrees awarded. 
+This yielded a final sample of roughly 1,500 universities.
+
+\section{Results}
+\subsection{Descriptive Statistics}
+
+Table \ref{tab:descriptive} shows aggregate median earnings 
+by dominant major. Transportation shows the highest 
+median earnings (\$84k), followed by Social Sciences (\$73k) and 
+Engineering (\$72k). Insitituions focused on Agriculture, 
+Theology, and Liberal Arts have the lowest 
+median earnings at below \$45k.
+
+\subsection{Main Findings}
+
+Figure \ref{fig:box} displays the relationship between dominant major 
+and median earnings. The boxplots provide a more nuanced understanding of 
+patterns between majors. Technical majors have the highest maximum earnings. 
+Business and Health Professions feature small interquartile ranges but yield
+a high number of outliers. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{figures/earnings_scatter.png}
+\caption{Median Earnings by University and Dominant Major}
+\label{fig:box}
+\end{figure}
+
+Figure \ref{fig:scatter} shows the distribution of the top 50
+earning universities, revealing significant within-major variation. 
+This does suggest that institutional quality matters beyond major choice.
+This also clearly shows the dominance of majors in Technology and Social Sciences.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{figures/T50_universities.png}
+\caption{Top 50 Earning Universities and Their Dominant Majors}
+\label{fig:scatter}
+\end{figure}
+
+\section{Discussion}
+These findings have a few possible implications. First, they suggest 
+that students seeking to maximize post-graduate 
+earnings should not only consider 
+individual major choice, but also the broader academic culture and focus of 
+their institution. Universities with strong Social Science and Engineering
+programs may provide better career networks, employer relationships, 
+and signaling value even for students in other fields.
+
+Also, the results highlight potential policy concerns about income 
+inequality across different institutions. Students attending 
+Agriculture or Liberal Arts-focused colleges face systematic 
+lower earnings, which may deepen 
+existing disparities in college access.
+
+\subsection{Limitations}
+\begin{itemize}
+    \item First, this analysis examines correlation, 
+not causation. The highest-earning institutions may attract students 
+with greater earning 
+potential regardless of the education provided. 
+    
+    \item Also, the earnings measure 
+only grades monetary returns and ignores other student values, such as job 
+satisfaction. 
+
+    \item The 10-year time period does not properly measure 
+long-term earnings, which may drastically differ across fields. For example, 
+many Biology majors are likely completing medical school and residency through
+their first 10 years after initial enrollment, and 
+do not have their earnings properly reflected in this data. 
+\end{itemize}
+
+\section{Conclusion}
+This project demonstrates a relationship between a university's 
+dominant academic major and the median earnings of its graduates. 
+Social Science, Engineering, Computer Science, and Transportation-focused 
+institutions produce graduates earning substantially more than those from 
+Performing Arts or Education-focused schools. These findings confirm the 
+importance of institutional characteristics in determining labor market 
+outcomes and raise important questions about 
+inequality in higher education.
+
+\begin{table}[H]
+\centering
+\caption{Median Earnings by Dominant Major}
+\label{tab:descriptive}
+\begin{tabular}{lrr}
+\toprule
+Dominant Major & Median Earnings & \;\;\; \# of Universities \\
+\midrule
+Transportation & \$84,131 & 6 \\
+Social Sciences & \$73,490 & 89 \\
+Engineering & \$72,261 & 48 \\
+Computer Science & \$66,757 & 24 \\
+Architecture & \$65,668 & 1 \\
+Business & \$54,549 & 648 \\
+Health Professions & \$54,338 & 325 \\
+Communication & \$53,130 & 4 \\
+Family \& Consumer Sciences & \$52,485 & 1 \\
+Biology & \$52,410 & 67 \\
+Engineering Technologies & \$51,867 & 2 \\
+Security \& Protective Services & \$51,590 & 16 \\
+Philosophy \& Religious Studies & \$51,365 & 4 \\
+Psychology & \$51,094 & 31 \\
+Visual \& Performing Arts & \$49,131 & 43 \\
+Education & \$48,136 & 52 \\
+Natural Resources & \$47,626 & 7 \\
+Parks \& Recreation & \$47,590 & 19 \\
+Multi/Interdisciplinary Studies & \$46,852 & 12 \\
+Public Administration & \$45,868 & 8 \\
+Mechanics \& Repair & \$44,844 & 2 \\
+Liberal Arts & \$44,301 & 47 \\
+Personal \& Culinary Services & \$43,418 & 1 \\
+Area/Ethnic/Cultural Studies & \$43,101 & 1 \\
+Theology & \$42,517 & 24 \\
+Agriculture & \$39,605 & 18 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
