@@ -10,7 +10,7 @@ Data comes from the [U.S. Department of Education College Scorecard](https://col
 
 - `notebooks/` - Jupyter notebook with complete analysis
 - `figures/` - All visualizations used in paper
-- `paper/` - LaTeX source and PDF
+- `write-up/` - LaTeX source and PDF
 - `data/` - Instructions for downloading data (file too large to include)
 
 ## Methodology
