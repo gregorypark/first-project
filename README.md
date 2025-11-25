@@ -4,7 +4,7 @@ Examining the relationship between a university's dominant academic major and me
 
 ## Data Source
 
-Data comes from the [U.S. Department of Education College Scorecard](https://collegescorecard.ed.gov/data/) (April 2023 update). 
+Data comes from the [U.S. Department of Education College Scorecard](https://collegescorecard.ed.gov/data/) (2023 update). 
 
 ## Repository Structure
 
